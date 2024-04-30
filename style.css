@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    background-color: #A88679;
+}
+
+.logo{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 0.5%;
+}
+
+.main{
+    height: auto;
+    width: 88dvw;
+    margin: 15px auto;
+    padding-bottom: 2%;
+    background-color: #dbc8c1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+}
+
+
+.container_titulo_botao{
+    margin: 2% 0 1% 0;
+    display: flex;
+    align-items: center;
+}
+
+.container_titulo_botao #titulo{
+    width: 55%;
+    margin-left: 2%;
+    padding: 0.1% 0 0.1% 0.5%;
+    font-size: clamp(1.8rem, 1.3vw + 0.3rem, 6rem);
+    border-radius: 5px;
+    background-color: #fafafa;
+
+}
+.main #titulo::placeholder{
+    font-size: clamp(1.8rem, 1vw + 0.3rem, 6rem);
+}
+
+
+.container_titulo_botao input[type=submit]{
+    padding: 0.3% 0.5%;
+    margin: 0 3%;
+    font-size: clamp(1.3rem, 1vw + 0.3rem, 5.5rem);
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(106 137 181);
+    border-color: rgb(106 137 181);
+}
+.container_titulo_botao input:nth-child(3){
+    background-color: #9f5555;
+    border-color: #9f5555;
+    margin-left: 1%
+}
+
+
+.main #texto{
+    height: 500px;
+    width: 93%;
+    max-width:95%;
+    min-height: 50vh;
+    padding: 0.6%;
+    margin-left: 2%;
+    font-size: clamp(1.3rem, 1.1vw + 0.2rem, 5.3rem);
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.container_salvos{
+    width: 100%;
+    height: auto;
+
+}
+
+.rascs_teste{
+    border-bottom: 1px solid gray;
+}
+
+.bloco_salvo{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    position: relative;
+    margin-top: 1%;
+    padding: 1.2% 0.5%;
+    border-top: 1px solid gray;
+}
+
+.seta{
+    width: 1%;
+    margin-left: 1%;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.num_titu{
+    display: flex;
+    width: 65%;
+    overflow: hidden;
+    align-items: center;
+}
+.num{
+    font-size: clamp(1.4rem ,0.5rem + 1vw, 5.3rem);
+    color: white;
+    border-radius: 50%;
+    background-color: #3498db;
+    width: 4%;
+    margin-left: 3%;
+    line-height: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+
+.titulo_salvo{
+    font-size: clamp( 2rem, 1.8vw + 0.3rem, 7rem);
+    margin-left: 2%;
+    width: 90%;
+    overflow-wrap: break-word;
+}
+
+
+.botoes{
+    position: absolute;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 10%
+}
+.rascs_teste .editar,.rascs_teste .excluir{
+    margin-left: 3%;
+    border-radius: 5px;
+    
+    color: white;
+    padding: 4% 7%;
+    cursor: pointer;
+    font-size: clamp(1.3rem, 1.3vw + 0.3rem, 6.6rem);
+    font-weight: bolder;
+}
+.rascs_teste .editar{
+    background-color: rgb(106 137 181);
+    border-color: rgb(106 137 181);
+}
+.rascs_teste .excluir{
+    background-color: #9f5555;
+    border-color: #9f5555;
+}
+
+.cont_p{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 1%;
+}
+.cont_p p, .cont_p h3{
+    width: 85%;
+    padding: 0.5% 3%;
+    margin: 0 auto;
+    background-color: #fafafa;
+    border: 0.5px solid gray;
+    border-radius: 5px;  
+    overflow-wrap: break-word;
+}
+.cont_p h3{
+    font-size: clamp(1.4rem, 1vw + 0.4vw, 6rem);
+}
+.cont_p p{
+    font-size: clamp(1.4rem, 0.9vw + 0.3vw, 5.4rem);
+}
+
+
+.baixo{
+    width: 100%;
+    height: 4%;
+    margin-top: 10%;
+    padding: 0.1% 3%;
+    background-color: #A88679;
+    border-top: 0.5px solid white;
+
+}
+
+.show{
+    display: flex;
+    }
+.rotate{
+    transform: rotate(-90deg);
+ }
+
+@media screen and (max-width: 430px ){
+
+    .logo{
+        width: 45%;
+        margin-left: 29%;
+    }
+
+    .main{
+        width: 93dvw;
+    }
+
+    .bloco_salvo{
+        padding: 6% 0.5%;
+    }
+
+    img{
+        width: 5%;
+        padding: 4px;
+    }
+
+    .titulo_salvo{
+        width: 90%;
+    }
+
+    .botoes{
+        right: 5%;
+        flex-direction: column;
+        gap:8%;
+        height: 95%;
+        width: 21%;
+    }
+
+    .rascs_teste .editar,.rascs_teste .excluir{
+        padding: 4% 8%;
+    }
+
+    .num{
+        width: 13%;
+    }
+}
+
+@media screen and (min-width: 1350px){
+
+    .main #texto{
+        min-width: 50%;
+        max-height: 97vh;
+
+    }
+}
